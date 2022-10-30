@@ -1,0 +1,32 @@
+:root{
+    --background: #131314;
+    --header-background: 
+}
+body{
+    background: #0F1013; 
+    margin: 0px;
+    font-family: Lato;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: #060607;
+    padding: 8px;
+}
+label{
+    color: #818486;
+    background-color: #0F1013;
+    margin: 6px;
+    padding: 14px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 30px;
+}
+input[type="radio"] {
+    display: none;
+}
+input:checked{
+    background-color: #6278b8
+}

@@ -8,14 +8,21 @@
     <title>Game Launcher</title>
   </head>
   <body>
-    <ul>
-      <li>Home</li>
-      <li>Settings</li>
-    </ul>
-
-    <div class="tab-content">
-      <div class="home">Home</div>
-      <div class="settings">Settings</div>
-    </div>
+    <nav class="navbar">
+      <ul>
+        <label class="navbtn">
+          <input type="radio" id="home" name="nav" value="gallery">
+          Gallery
+        </label>
+        <label class="navbtn">
+          <input type="radio" id="home" name="nav" value="home" checked>
+          Home
+        </label>
+        <label class="navbtn">
+          <input type="radio" id="settings" name="nav" value="settings">
+          Settings
+        </label>
+      </ul>
+    </nav>
   </body>
 </html>
