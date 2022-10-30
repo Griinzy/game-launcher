@@ -1,0 +1,14 @@
+{
+  "name": "gamelauncher",
+  "version": "1.0.0",
+  "description": "An Electron Based Game Launcher",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "lin",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^21.2.0"
+  }
+}
