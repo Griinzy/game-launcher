@@ -1,8 +1,19 @@
-document.onkeydown = checkKey;
-function checkKey(e){
-    e = e || window.event;
-    if(e.code == '81')
-    {
-        document.getElementById('#gallery').checked = true;
-    }
+var current = 1;
+
+const delay = 500;
+
+const arr = ["gallery", "home", "settings"];
+
+
+
+const right = function() {
+    document.getElementById(arr[current % arr.length]).checked = false
+    current++
+    document.getElementById(arr[current % arr.length]).checked = true
+}
+
+const left = function() {
+    document.getElementById(arr[current % arr.length]).checked = false
+    current--
+    document.getElementById(arr[current % arr.length]).checked = true
 }

@@ -11,10 +11,14 @@ app.on("ready", () => {
 
     win.loadFile('index.html')
 
+    globalShortcut.register("e", () => {
+        win.webContents.executeJavaScript(
+            `right()`
+            )
+    })
     globalShortcut.register("q", () => {
         win.webContents.executeJavaScript(
-            `document.getElementById('gallery').checked = true`
+            `left()`
             )
-        // console.log(win)
     })
 })
