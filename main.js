@@ -1,19 +1,20 @@
-const { app, BrowserWindow, globalShortcut } = require('electron')
-const createWindow = () => {
+const { app, BrowserWindow, globalShortcut} = require('electron')
+
+app.on("ready", () => {
     const win = new BrowserWindow({
         width: 1280,
         height: 720,
-        minWidth: 600,
-        minHeight: 180,
+        minWidth: 640,
+        minHeight: 360,
         autoHideMenuBar: true
     })
-    //win.removeMenu() 
-  
+
     win.loadFile('index.html')
-    }
-    app.whenReady().then(() => {
-        createWindow()
-        globalShortcut.register("q", () => {
-            document.getElementById('#gallery').checked = true;
-        });
+
+    globalShortcut.register("q", () => {
+        win.webContents.executeJavaScript(
+            `document.getElementById('gallery').checked = true`
+            )
+        // console.log(win)
     })
+})

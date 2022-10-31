@@ -9,7 +9,8 @@
   "author": "lin",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^21.2.0"
+    "electron": "^21.2.0",
+    "eslint": "^8.26.0"
   },
   "dependencies": {
     "electron-localshortcut": "^3.2.1"
