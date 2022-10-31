@@ -1,31 +1,46 @@
-:root{
-    --background: #131314;
-    --header-background: 
+:root {
+    --text-color: #CED1D2;
+    --background: #090A0D;
+    --navbar-background: #060607;
+    --button-text: #818486;
+    --button-background: #0F1013;
+    --button-current-text: #CED1D2;
+    --button-current-background: #15171D;
+    --secondary: #303030
 }
-body{
+
+body {
+    color: var(--text-color);
     background: #0F1013; 
     margin: 0px;
-    font-family: Lato;
-    font-weight: bolder;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
     font-size: 18px;
 }
-.navbar{
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: #060607;
     padding: 8px;
     overflow: hidden;
 }
-.footer{
+
+.footer {
+    text-align: center;
     position: fixed;
     background-color: #060607;
     width: 100%;
-    height: 50px;
+    height: 45px;
     bottom: 0;
 }
-label{
-    color: #818486;
-    background-color: #0F1013;
+
+label {
+    color: #CED1D2;
+    background-color: #060607;
     margin: 3px;
     padding: 14px;
     padding-left: 50px;
@@ -33,11 +48,20 @@ label{
     border-radius: 30px;
     transition: background-color 0.3s ease-in, padding 0.3s ease-in, padding-left 0.3s ease-in, padding-right 0.3s ease-in;
 }
+
 input[name="nav"] {
-    display: none;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    margin: 0px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
 }
-input[name="nav"]:checked + label{
-    background-color: #15171D;
+
+input[name="nav"]:checked + label {
+    font-weight: bolder;
+    color: #060607;
+    background-color: #CED1D2;
     padding: 18px;
     padding-left: 55px;
     padding-right: 55px;
