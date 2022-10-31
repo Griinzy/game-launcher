@@ -1,4 +1,5 @@
 const { app, BrowserWindow, globalShortcut} = require('electron')
+const els = require('electron-localshortcut');
 
 app.on("ready", () => {
     const win = new BrowserWindow({
@@ -11,14 +12,20 @@ app.on("ready", () => {
 
     win.loadFile('index.html')
 
-    globalShortcut.register("e", () => {
+    // oh my fucking god i almost just did a python comment (i used #)
+    
+    // no onkeydown for you <3 NOOOOO
+    els.register(win, 'e', () => {
         win.webContents.executeJavaScript(
-            `right()`
+            `move("right")`
             )
     })
-    globalShortcut.register("q", () => {
+
+    //thres no difference between '' and ""
+    // is it not working?? nope
+    els.register(win, 'q', () => {
         win.webContents.executeJavaScript(
-            `left()`
+            `move("left")`
             )
     })
 })
