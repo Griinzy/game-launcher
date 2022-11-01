@@ -36,6 +36,10 @@ body {
     display: none;
 }
 
+#contentHome {
+    display: block;
+}
+
 .footer {
     text-align: center;
     position: fixed;

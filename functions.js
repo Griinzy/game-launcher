@@ -48,6 +48,7 @@ const updateContent = function(){
         document.getElementById("contentHome").style.display = "none";
         document.getElementById("contentSettings").style.display = "block";
     }
+    else console.log("das not right");
 }
 
 // theMath dont work 
