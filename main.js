@@ -1,4 +1,4 @@
-const { app, BrowserWindow, globalShortcut} = require('electron')
+const { app, BrowserWindow } = require('electron')
 const els = require('electron-localshortcut');
 
 app.on("ready", () => {
@@ -17,15 +17,17 @@ app.on("ready", () => {
     // no onkeydown for you <3 NOOOOO
     els.register(win, 'e', () => {
         win.webContents.executeJavaScript(
-            `move("right")`
-            )
+            `move("right"),
+            updateContent()`
+        )
     })
 
     //thres no difference between '' and ""
     // is it not working?? nope
     els.register(win, 'q', () => {
         win.webContents.executeJavaScript(
-            `move("left")`
+            `move("left"),
+            updateContent()`
             )
     })
 })

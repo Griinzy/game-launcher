@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
     <link rel="stylesheet" href="style.css">
     <script src="functions.js"></script>
     <title>GAming Lawnchair</title>
@@ -12,15 +12,18 @@
     <nav class="navbar">
       <ul>
         <form name="tabs">
-          <input type="radio" id="gallery" name="nav" value="gallery">
-          <label for="gallery">Gallery</label>
-          <input type="radio" id="home" name="nav" value="home" checked>
+          <input type="radio" onclick="updateContent()" id="about" name="nav" value="about">
+          <label for="about">About</label>
+          <input type="radio" onclick="updateContent()" id="home" name="nav" value="home" checked>
           <label for="home">Home</label>
-          <input type="radio" id="settings" name="nav" class="navbtn" value="settings">
+          <input type="radio" onclick="updateContent()" id="settings" name="nav" class="navbtn" value="settings">
           <label for="settings">Settings</label>
         </form>
       </ul>
     </nav>
+    <div class="content" id="contentAbout">AAAAAAAAAAAAAAAAAAAAAAA</div>
+    <div class="content" id="contentHome">BBBBBBBBBBBBBBBBBBBBBBB</div>
+    <div class="content" id="contentSettings">CCCCCCCCCCCCCCCCCCCCCCC</div>
     <div class="footer">
       <p>YESHHH</p>
     </div>
